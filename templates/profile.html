@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h1>WELCOME{{name}}</h1></center>
+{% if messages %}
+{% for message in messages %}
+<small {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</small>
+{% endfor %}
+{% endif %}
+<a href="{% url 'logout' %}">logout</a>
+</body>
+</html>
